@@ -10,25 +10,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
 
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                primary: '#FF602C',
-                background: '#1D1D1D',
-                navbg: 'rgba(89, 86, 86, 0.29)',
-                cardbg: 'rgba(89, 86, 86, 0.4)',
-              },
-              fontFamily: {
-                inter: ['Inter', 'sans-serif'],
-              },
-            }
-          }
+     <style>
+        :root {
+            --color-primary: #FF602C;
+            --color-background: #1D1D1D;
+            --color-navbg: rgba(89, 86, 86, 0.29);
+            --color-cardbg: rgba(89, 86, 86, 0.4);
+            --font-inter: 'Inter', sans-serif;
         }
-      </script>
-      
-    <style>
+
+        .bg-primary {
+            background-color: var(--color-primary);
+        }
+
+        .bg-background {
+            background-color: var(--color-background);
+        }
+
+        .bg-navbg {
+            background-color: var(--color-navbg);
+        }
+
+        .bg-cardbg {
+            background-color: var(--color-cardbg);
+        }
+
+        .text-primary {
+            color: var(--color-primary);
+        }
+
+        .font-inter {
+            font-family: var(--font-inter);
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #1D1D1D;
@@ -36,7 +50,7 @@
             overflow: hidden;
         }
 
-        select{
+        select {
             appearance: none;
             accent-color: #FF602C;
             background-color: #1D1D1D;
