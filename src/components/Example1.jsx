@@ -1,21 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Form() {
-    const [firstName] = useState("Taylor");
-    const [lastName] = useState("Swift");
+  const [firstName] = useState("Taylor");
+  const [lastName] = useState("Swift");
 
-    // 🔴 Avoid: redundant state and unnecessary Effect
-    // const [fullName, setFullName] = useState("");
-    // useEffect(() => {
-    //     setFullName(firstName + " " + lastName);
-    // }, [firstName, lastName]);
+  // 🔴 Avoid: redundant state and unnecessary Effect
+  //   const [fullName, setFullName] = useState("");
+  //   useEffect(() => {
+  //     setFullName(firstName + " " + lastName);
+  //   }, [firstName, lastName]);
 
-    // ✅ Good: calculated during rendering
-    const fullName = firstName + " " + lastName;
+  // ✅ Good: calculated during rendering
+  const fullName = firstName + " " + lastName;
 
-    return (
-        <div>
-            <p>{fullName}</p>
-        </div>
-    );
+  return (
+    <div>
+      <p>{fullName}</p>
+    </div>
+  );
 }
